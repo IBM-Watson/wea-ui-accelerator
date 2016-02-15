@@ -1,0 +1,18 @@
+{
+  "local": {
+    "WEA_API_URL": "http://your_wea_server/instance/watson/wea/v2",
+    "WEA_API_TOKEN": "wea-example-local"
+  },
+  "sandbox": {
+    "WEA_API_URL": "http://your_wea_server/instance/watson/wea/v2",
+    "WEA_API_TOKEN": "wea-example-sandbox"
+  },
+  "develop": {
+    "WEA_API_URL": "http://your_wea_server/instance/watson/wea/v2",
+    "WEA_API_TOKEN": "wea-example-dev"
+  },
+  "production": {
+    "WEA_API_URL": "http://your_wea_server/instance/watson/wea/v2",
+    "WEA_API_TOKEN": "wea-example"
+  }
+}

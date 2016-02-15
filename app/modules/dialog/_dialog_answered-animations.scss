@@ -1,0 +1,46 @@
+// (c) Copyright 2001-2015 IBM Corporation. All rights reserved.
+
+// Dialog "answered" state animations
+response ul li {
+  animation: fade-in 1s linear both;
+}
+
+@for $i from 1 through 10 {
+  response ul li:nth-child(#{$i}) {
+    animation-delay: #{0s + $i * .15s};
+  }
+}
+
+.dialog_state_answered {
+  .dialog__avatar {
+    animation: fade-in .5s ease both;
+  }
+
+  .dialog__response_type_default {
+    animation: slide-up .5s ease .5s both;
+
+    .dialog-entry__response {
+      animation: fade-in .5s ease 1s both;
+    }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    padding-top: 100vh;
+  }
+
+  to {
+    padding-top: 0;
+  }
+}

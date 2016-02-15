@@ -1,0 +1,68 @@
+// (c) Copyright 2001-2015 IBM Corporation. All rights reserved.
+
+// Guidance drawer
+$guidance-trigger-height: $bottom-bar-height !default;
+$guidance-color: $home-color !default;
+$guidance-heading-color: $blue9 !default;
+$guidance-ruler-color: $grey2 !default;
+$guidance-bg: $home-bg !default;
+$guidance-overlay-bg: $bg-color-overlay-dark !default;
+
+.guidance {
+  position: absolute;
+  top: calc(100% - #{$guidance-trigger-height});
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: $guidance-trigger-height;
+  margin: 0;
+  overflow: hidden;
+  font-size: $font-size-small;
+  color: $guidance-color;
+  text-align: center;
+  background: transparent;
+  transition: all .2s;
+
+  hr {
+    width: 80%;
+    margin-top: 50px;
+    border-color: $guidance-ruler-color;
+  }
+}
+
+.guidance-overlay {
+  padding: $padding-large-vertical 0;
+  background: $guidance-overlay-bg;
+}
+
+.guidance_state_visible {
+  top: 60px;
+  height: 100%;
+
+  .guidance-overlay {
+    background: linear-gradient(to bottom, $guidance-overlay-bg, $guidance-overlay-bg), $guidance-bg;
+  }
+}
+
+.guidance__heading {
+  color: $guidance-heading-color;
+}
+
+.guidance__entry {
+  line-height: 2em;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.guidance__entry-spacer {
+  color: $guidance-heading-color;
+}
+
+.guidance-trigger {
+  display: none;
+}
+
+.guidance-trigger-label {
+  font-weight: inherit;
+  cursor: pointer;
+}

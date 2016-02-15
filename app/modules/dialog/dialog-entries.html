@@ -1,0 +1,28 @@
+<!-- (c) Copyright 2001-2015 IBM Corporation. All rights reserved. -->
+<section class="dialog__response dialog__response_type_{{dialogCtrl.responseType}}">
+  <div class="row">
+    <div class="dialog__show-all-toggle col-xs-12" ng-click="dialogCtrl.toggleShowAll()" ui-scrollfix="-20">
+      <span class="text-primary" ng-hide="dialogCtrl.showAll" translate>Show all</span>
+      <span class="text-primary" ng-show="dialogCtrl.showAll" translate>Show less</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <ul class="dialog-entries col-xs-12">
+      <li class="dialog-entry row"
+          ng-repeat="entry in dialogCtrl.conversation"
+          ng-if="dialogCtrl.showAll || $last"
+          ng-class="{'readonly': dialogCtrl.showAll && !$last}">
+        <div class="arrow-down-sm">
+          <div class="dialog-entry__question">
+            <em>{{entry.message}}</em>
+          </div>
+        </div>
+        <response id="{{'response-' + ($last ? 'last' : $index)}}"
+                  class="dialog-entry__response col-sm-6 col-sm-offset-3"
+                  content="entry">
+        </response>
+      </li>
+    </ul>
+  </div>
+</section>

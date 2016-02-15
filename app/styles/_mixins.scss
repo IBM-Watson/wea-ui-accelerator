@@ -1,0 +1,30 @@
+// (c) Copyright 2001-2015 IBM Corporation. All rights reserved.
+
+@mixin arrow-common($size, $transition-duration: 0) {
+  // scss-lint:disable ColorVariable
+  transition: all $transition-duration linear;
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin: 0 auto;
+  border-right: $size solid transparent;
+  border-left: $size solid transparent;
+  content: '';
+  left: 50%;
+  margin-left: $size * -1;
+}
+
+@mixin arrow-up($size, $color, $transition-duration: 0) {
+  &:before {
+    @include arrow-common($size, $transition-duration);
+    border-bottom: $size solid $color;
+  }
+}
+
+@mixin arrow-down($size, $color, $transition-duration: 0) {
+  &:after {
+    @include arrow-common($size, $transition-duration);
+    border-top: $size solid $color;
+  }
+}

@@ -1,0 +1,136 @@
+<!-- (c) Copyright 2001-2015 IBM Corporation. All rights reserved. -->
+<section class="styleguide">
+
+  <section class="styleguide__header">
+    <div class="container">
+      <h1 class="col-md-8">WEA Accelerator Style Guide</h1>
+    </div>
+  </section>
+
+  <section class="styleguide__avatar">
+    <h3 class="page-header">Avatar states</h3>
+    <p class="lead">Preview avatar states using the buttons below.</p>
+    <div class="btn-group" role="group">
+      <button type="button"
+              class="btn btn-default"
+              ng-repeat="state in ['default', 'listening', 'thinking', 'thinking-complete']"
+              ng-click="sgCtrl.avatarState = state"
+              ng-class="{'active': sgCtrl.avatarState === state}">
+        {{state}}
+      </button>
+    </div>
+    <watson-avatar class="dialog__avatar row" state="{{sgCtrl.avatarState}}"></watson-avatar>
+    <div class="example">
+      <pre>&lt;watson-avatar state="{{sgCtrl.avatarState}}"&gt;&lt;/watson-avatar&gt;</pre>
+    </div>
+  </section>
+
+  <section class="styleguide__themes">
+    <h3 class="page-header">Themes</h3>
+    <h3>Home screen</h3>
+    <p>Home screen theme applies to the initial screen of the application.</p>
+    <styleguide-colors colors="[
+        'home-bg',
+        'home-color',
+        'home-input-bg',
+        'home-input-color',
+        'home-input-color-placeholder',
+        'home-controls-color'
+    ]"></styleguide-colors>
+
+    <h4>Helpful Links drawer</h4>
+    <styleguide-colors colors="[
+        'guidance-bg',
+        'guidance-color',
+        'guidance-heading-color'
+    ]"></styleguide-colors>
+
+    <h3>Input screen</h3>
+    <p>Input screen theme applies to the question input screen of the application.</p>
+    <styleguide-colors colors="[
+        'editing-bg',
+        'editing-color',
+        'editing-input-bg',
+        'editing-input-color',
+        'editing-input-color-placeholder',
+        'editing-form-border-color',
+        'editing-controls-color'
+    ]"></styleguide-colors>
+
+    <h3>Response screen</h3>
+    <p>Response screen theme applies to the response screen of the application.</p>
+    <styleguide-colors colors="[
+        'answered-bg',
+        'answered-color',
+        'answered-input-bg',
+        'answered-input-color',
+        'answered-input-color-placeholder',
+        'answered-border-color',
+        'answered-question-bg',
+        'answered-question-color',
+        'answered-question-bg--readonly',
+        'answered-controls-color'
+    ]"></styleguide-colors>
+
+    <h4>Default template</h4>
+    <p>The default theme applies to any responses that are not using a custom template.</p>
+    <styleguide-colors colors="[
+      'default-bg',
+      'default-color',
+      'default-color--highlight',
+      'default-color--secondary',
+      'default-border-color'
+    ]"></styleguide-colors>
+    <styleguide-example model="sgCtrl.examples.themes.default"></styleguide-example>
+
+    <h4>Summary</h4>
+    <p>The Summary theme applies to responses that are using the <code>summary</code> custom template.</p>
+    <styleguide-colors colors="[
+        'summary-bg',
+        'summary-color',
+        'summary-border-color',
+        'summary-item-color'
+    ]"></styleguide-colors>
+    <styleguide-example model="sgCtrl.examples.themes.summary"></styleguide-example>
+
+    <h4>Confirmation</h4>
+    <p>The Confirmation theme applies to responses that are using the <code>confirmation</code> custom template.</p>
+    <styleguide-colors colors="[
+        'confirmation-bg',
+        'confirmation-color',
+        'confirmation-button-bg',
+        'confirmation-button-border-color',
+        'confirmation-button-color'
+    ]"></styleguide-colors>
+    <styleguide-example model="sgCtrl.examples.themes.confirmation"></styleguide-example>
+
+    <h4>Transition</h4>
+    <p>The Transition theme applies to responses that are using the <code>transition</code> custom template.</p>
+    <styleguide-colors colors="[
+        'transition-bg',
+        'transition-color',
+        'transition-button-bg',
+        'transition-button-border-color',
+        'transition-button-color'
+    ]"></styleguide-colors>
+    <styleguide-example model="sgCtrl.examples.themes.transition"></styleguide-example>
+  </section>
+
+  <section class="styleguide__components">
+    <h3 class="page-header">Components</h3>
+    <div ng-repeat="example in sgCtrl.examples.components">
+      <h4>{{example.title}}</h4>
+      <p ng-bind-html="example.description"></p>
+      <styleguide-example model="example.response"></styleguide-example>
+    </div>
+  </section>
+
+  <section class="styleguide__formatting">
+    <h3 class="page-header">Formatting</h3>
+    <div ng-repeat="example in sgCtrl.examples.formatting">
+      <h4>{{example.title}}</h4>
+      <p ng-bind-html="example.description"></p>
+      <styleguide-example model="example.response"></styleguide-example>
+    </div>
+  </section>
+</section>

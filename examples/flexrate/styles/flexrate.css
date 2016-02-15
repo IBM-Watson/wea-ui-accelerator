@@ -1,0 +1,200 @@
+// Landing
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-weight: 300;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  min-width: 320px;
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+strong {
+  font-weight: 500;
+}
+
+h1,
+h3,
+h4 {
+  margin: 0;
+  letter-spacing: -.03em;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.6em;
+  font-weight: 300;
+}
+
+.landing {
+  min-height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  color: #054266;
+  background-color: #f0eff0;
+}
+
+.landing__header {
+  padding: 30px 15px 15px;
+}
+
+.landing__body {
+  border: 1px solid #054266;
+  padding: 15px;
+}
+
+.landing__body h3,
+.landing__body p {
+  margin-bottom: 15px;
+}
+
+.landing__body img {
+  display: block;
+  width: 100%;
+  min-height: 200px;
+  margin-bottom: 15px;
+  background-color: rgb(199, 198, 203);
+}
+
+.landing__watson-trigger {
+  display: block;
+  padding: 15px;
+  color: #fff;
+  cursor: pointer;
+  background-color: #054266;
+}
+
+.landing__watson-trigger:hover {
+  color: #fff;
+}
+
+.landing__watson-trigger h3 {
+    margin-bottom: 5px;
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+.landing__watson-trigger p {
+    font-size: 1.2em;
+    line-height: 1.17em;
+}
+
+.landing__avatar {
+  float: right;
+  width: 100px;
+  max-height: 100px;
+  min-height: 100px;
+  margin: -15px -15px 0 0;
+}
+
+.landing__products {
+  padding: 0;
+  margin-top: 15px;
+}
+
+.landing__products h4 {
+  font-size: 1.5em;
+}
+
+.landing__products img {
+  width: 50%;
+  padding-bottom: 5px;
+}
+
+.landing__product-list {
+  padding: 0;
+  list-style-type: none;
+}
+.landing__product-list li {
+    padding: 5px;
+  }
+
+.landing__product {
+  display: block;
+  padding: 15px;
+  font-size: 1.4em;
+  color: #fff;
+  text-align: center;
+}
+
+.landing__product_type_home {
+  background-color: #4b853d;
+}
+
+.landing__product_type_auto {
+  background-color: #a5266d;
+}
+
+.landing__product_type_condo {
+  background-color: #4278bc;
+}
+
+.landing__product_type_life {
+  background-color: #018571;
+}
+
+.wea-widget {
+  width: 100%;
+  height: 600px;
+  border: 1px solid #054266;
+}
+
+@media (max-width: 767px) {
+  .arrow-up-sm {
+    display: block;
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    border-left: 10px solid transparent;
+    content: '';
+    padding: 0;
+  }
+
+  .arrow-up-sm:before {
+    display: block;
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    content: '';
+    border-bottom: 10px solid #054266;
+  }
+
+  .landing__watson-trigger {
+    margin: 0 -15px;
+  }
+}

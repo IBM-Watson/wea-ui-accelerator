@@ -1,0 +1,11 @@
+<!-- (c) Copyright 2001-2015 IBM Corporation. All rights reserved. -->
+<div class="quit">
+  <span class="quit__link" ng-click="quit()">✕</span>
+</div>
+
+<div class="quit-overlay" ng-show="quitting">
+  <div class="quit-overlay__actions">
+    <button class="btn btn-danger btn-lg btn-block" ng-click="confirm()" translate>Quit</button>
+    <button class="btn btn-default btn-lg btn-block" ng-click="cancel()" translate>Cancel</button>
+  </div>
+</div>

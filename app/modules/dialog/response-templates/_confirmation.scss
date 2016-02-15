@@ -1,0 +1,62 @@
+// (c) Copyright 2001-2015 IBM Corporation. All rights reserved.
+
+$confirmation-bg: $home-bg !default;
+$confirmation-color: $home-color !default;
+$confirmation-button-bg: $home-color !default;
+$confirmation-button-border-color: $home-color !default;
+$confirmation-button-color: $blue7 !default;
+$confirmation-item-value-bg: rgba(255, 255, 255, .15) !default;
+
+.confirmation {
+  z-index: 95;
+  padding-top: #{(2 * $padding-large-vertical) + $status-bar-height};
+  color: $confirmation-color;
+  background: $confirmation-bg;
+
+  watson-avatar {
+    @extend %avatar;
+    cursor: pointer;
+  }
+
+  .bubbles,
+  .boxes {
+    li {
+      @include button-variant($confirmation-button-color, $confirmation-button-bg, $confirmation-button-border-color);
+    }
+  }
+}
+
+.confirmation__change {
+  font-weight: $font-weight-medium;
+}
+
+.confirmation__items {
+  padding: 1em 0 0;
+  margin: 0 -15px;
+  text-align: left;
+  list-style: none;
+}
+
+.confirmation__item {
+  padding: .5em $padding-base-horizontal;
+  margin: 0;
+  font-size: $font-size-small;
+  border-top: 1px solid $grey1;
+
+  &:after {
+    display: block;
+    clear: both;
+    content: ' ';
+  }
+
+  span {
+    display: block;
+    float: left;
+    width: 50%;
+  }
+
+  span:last-child {
+    padding: 0 .25em;
+    background: $confirmation-item-value-bg;
+  }
+}

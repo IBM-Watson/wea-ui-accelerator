@@ -1,0 +1,43 @@
+// (c) Copyright 2001-2015 IBM Corporation. All rights reserved.
+
+// Dialog defaults
+$default-bg: linear-gradient(to bottom, #f0eff0, mix(#f0eff0, #e2e0e2) 72%, #e2e0e2) !default; // scss-lint:disable ColorVariable
+$default-color: $brand-primary !default;
+$default-border-color: $brand-primary !default;
+
+.dialog {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+  color: $default-color;
+}
+
+.dialog__avatar {
+  text-align: center;
+  cursor: pointer;
+}
+
+.dialog-form {
+  .form-group {
+    margin: 0;
+  }
+
+  input {
+    font-size: $font-size-small;
+  }
+}
+
+.has-controls {
+  position: relative;
+}
+
+// scss-lint:disable SelectorFormat
+mct\:pre-submit {
+  display: none;
+}
+// scss-lint:enable SelectorFormat
+
+@import 'dialog_initial';
+@import 'dialog_editing';
+@import 'dialog_answered';
+@import 'dialog_answered-animations';

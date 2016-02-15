@@ -1,0 +1,225 @@
+// (c) Copyright 2001-2015 IBM Corporation. All rights reserved.
+
+// Styleguide
+// scss-lint:disable ColorVariable
+
+$styleguide-header-bg: $home-bg !default;
+$styleguide-avatar-color: $brand-primary !default;
+
+.styleguide {
+  padding: 0 15px;
+
+  .page-header {
+    border-color: #b0b0b0;
+  }
+
+  h4 {
+    margin-top: 54px;
+  }
+}
+
+.styleguide__header {
+  padding: 30px 15px;
+  margin: 60px -15px 0;
+  color: #fff;
+  background: $styleguide-header-bg;
+
+  h1 {
+    letter-spacing: -.03em;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-right: -1000px;
+    margin-left: -1000px;
+
+    h1 {
+      font-size: 70px;
+      line-height: 1;
+    }
+  }
+}
+
+.styleguide__avatar {
+  color: $styleguide-avatar-color;
+
+  watson-avatar {
+    display: block;
+    width: 50%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .avatar-states {
+    padding: 20px;
+
+    a {
+      display: block;
+      cursor: pointer;
+    }
+  }
+
+  .default .default,
+  .listening .listening,
+  .thinking .thinking,
+  .thinking-complete .thinking-complete {
+    color: #f00;
+  }
+}
+
+.colors {
+  $configurable-colors: (
+    body-bg: $body-bg,
+    input-bg: $input-bg,
+    home-bg: $home-bg,
+    home-color: $home-color,
+    home-input-bg: $home-input-bg,
+    home-input-color: $home-input-color,
+    home-input-color-placeholder: $home-input-color-placeholder,
+    home-controls-color: $home-controls-color,
+    guidance-bg: $guidance-bg,
+    guidance-color: $guidance-color,
+    guidance-heading-color: $guidance-heading-color,
+    editing-bg: $editing-bg,
+    editing-color: $editing-color,
+    editing-input-bg: $editing-input-bg,
+    editing-input-color: $editing-input-color,
+    editing-input-color-placeholder: $editing-input-color-placeholder,
+    editing-form-border-color: $editing-form-border-color,
+    editing-controls-color: $editing-controls-color,
+    answered-bg: $answered-bg,
+    answered-color: $answered-color,
+    answered-input-bg: $answered-input-bg,
+    answered-input-color: $answered-input-color,
+    answered-input-color-placeholder: $answered-input-color-placeholder,
+    answered-border-color: $answered-border-color,
+    answered-question-bg: $answered-question-bg,
+    answered-question-color: $answered-question-color,
+    answered-question-bg--readonly: $answered-question-bg--readonly,
+    answered-controls-color: $answered-controls-color,
+    default-bg: $default-bg,
+    default-color: $default-color,
+    default-color--highlight: $default-color--highlight,
+    default-color--secondary: $default-color--secondary,
+    default-border-color: $default-border-color,
+    summary-bg: $summary-bg,
+    summary-color: $summary-color,
+    summary-border-color: $summary-border-color,
+    summary-item-color: $summary-item-color,
+    confirmation-bg: $confirmation-bg,
+    confirmation-color: $confirmation-color,
+    confirmation-button-bg: $confirmation-button-bg,
+    confirmation-button-border-color: $confirmation-button-border-color,
+    confirmation-button-color: $confirmation-button-color,
+    transition-bg: $transition-bg,
+    transition-color: $transition-color,
+    transition-button-bg: $transition-button-bg,
+    transition-button-border-color: $transition-button-border-color,
+    transition-button-color: $transition-button-color
+  );
+
+  li {
+    display: inline-block;
+    width: 15vw;
+    max-width: 120px;
+    min-width: 80px;
+    margin: 5px 10px;
+    font-size: smaller;
+  }
+
+  li:after {
+    display: block;
+    width: 15vw;
+    height: 15vw;
+    max-width: 120px;
+    max-height: 120px;
+    min-width: 80px;
+    min-height: 80px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    border-radius: .5em;
+    content: '';
+  }
+
+  @each $color, $value in $configurable-colors {
+    li.#{$color}:after {
+      background: $value;
+    }
+  }
+}
+
+.example {
+  position: relative;
+  display: flex;
+  padding: 45px 15px 15px;
+  margin: 0 -15px 15px;
+  border-color: #e5e5e5 #eee #eee;
+  border-style: solid;
+  border-width: 1px 0;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, .05);
+
+  @media (min-width: $screen-sm-min) {
+    margin-right: 0;
+    margin-left: 0;
+    background-color: #fff;
+    border-color: #ddd;
+    border-width: 1px;
+    border-radius: 4px 4px 0 0;
+    box-shadow: none;
+  }
+
+  &:after {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #959595;
+    text-transform: uppercase;
+    content: 'Example';
+  }
+}
+
+.example__code {
+  height: 568px;
+  min-width: 320px;
+  margin-right: 15px;
+  font-family: $font-family-monospace;
+  font-size: $font-size-small;
+  resize: none;
+}
+
+.example__container {
+  position: relative;
+  width: 320px;
+  min-width: 320px;
+  min-height: 568px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #b6b6b6;
+  box-sizing: content-box;
+
+  .dialog-form {
+    position: absolute;
+
+    @media (min-width: $screen-lg-min) {
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  .full-screen {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding-right: inherit;
+    padding-left: inherit;
+
+    > * {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
+

@@ -1,0 +1,182 @@
+// (c) Copyright 2001-2015 IBM Corporation. All rights reserved.
+
+// Dialog "answered" state
+$answered-bg: $default-bg !default;
+$answered-color: $default-color !default;
+$answered-border-color: $default-border-color !default;
+$answered-input-bg: $input-bg !default;
+$answered-input-color: $input-color !default;
+$answered-input-color-placeholder: $input-color-placeholder !default;
+$answered-question-bg: $blue7 !default;
+$answered-question-color: $white0 !default;
+$answered-question-bg--readonly: $grey3 !default;
+$answered-controls-color: $answered-color !default;
+
+
+%avatar {
+  display: block;
+  width: 30%;
+  max-width: 300px;
+  min-width: 140px;
+  margin: 0 auto;
+
+  // iPad landscape mode
+  @media (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (orientation: landscape) {
+    max-width: 240px;
+  }
+}
+
+.dialog_state_answered {
+  $form-height: 50px;
+
+  padding-top: $status-bar-height;
+  color: $answered-color;
+  background: $answered-bg;
+
+  quit {
+    color: $answered-controls-color;
+  }
+
+  .menu-trigger-label .icon-bar {
+    background-color: $answered-controls-color;
+  }
+
+  .dialog__avatar {
+    @extend %avatar;
+  }
+
+  .dialog__show-all-toggle {
+    min-height: 30px;
+    padding-left: $padding-base-horizontal;
+    margin-top: -30px;
+    font-size: $font-size-small;
+
+    span {
+      display: block;
+      width: 100%;
+      min-height: 30px;
+      padding-top: $padding-small-vertical;
+      color: $answered-controls-color;
+      cursor: pointer;
+    }
+
+    &.ui-scrollfix span {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      padding: $padding-small-vertical + $status-bar-height 0 $padding-small-vertical $padding-base-horizontal;
+      background: $answered-bg;
+      border-bottom: 1px solid $answered-border-color;
+    }
+  }
+
+  .dialog-form {
+    @include arrow-down(8px, $answered-input-bg);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 90;
+    width: 100%;
+    padding: 8px 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, .15);
+
+    .form-group {
+      display: flex;
+      height: $form-height;
+      background-color: $answered-input-bg;
+      align-items: center;
+    }
+  }
+
+  @media (min-width: $screen-lg-min) {
+    .dialog-form {
+      left: calc((100% - #{$container-lg}) / 2);
+      width: $container-lg;
+    }
+  }
+
+  .dialog-form__input-container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .dialog-form__input {
+    padding: 0 $padding-base-horizontal;
+    color: $answered-input-color;
+    background-color: $answered-input-bg;
+    border: 0;
+    border-radius: 0;
+    outline: none;
+    box-shadow: none;
+
+    &::placeholder {
+      color: $answered-input-color-placeholder;
+    }
+  }
+
+  .dialog-form__input-clear {
+    display: none;
+  }
+
+  .dialog-entries {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: $bottom-bar-height;
+    text-align: center;
+  }
+
+  .dialog-entry {
+    list-style-type: none;
+  }
+
+  .arrow-down-sm {
+    @include arrow-down(8px, $answered-question-bg);
+  }
+
+  .dialog-entry__question {
+    padding: 1em $padding-base-horizontal;
+    color: $answered-question-color;
+    background-color: $answered-question-bg;
+  }
+
+  .dialog-entry__response {
+    display: block;
+    padding: 1em $padding-base-horizontal;
+    color: $answered-color;
+  }
+
+  .readonly {
+    .arrow-down-sm {
+      @include arrow-down(8px, $answered-question-bg--readonly);
+    }
+
+    .dialog-entry__question {
+      background-color: $answered-question-bg--readonly;
+    }
+
+    .dialog-entry__response {
+      opacity: .5;
+    }
+
+    .bubbles,
+    .boxes,
+    .full-screen,
+    autoselect,
+    datetime {
+      display: none;
+    }
+  }
+}
+
+.embedded {
+  @import 'dialog_answered_embedded';
+}
+
+@import 'response-templates/default';
+@import 'response-templates/summary';
+@import 'response-templates/confirmation';
+@import 'response-templates/transition';

@@ -1,0 +1,298 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: modules/intro/intro.html:7
+msgid "<h1>Hello!<br>I'm <strong>Watson</strong></h1>"
+msgstr "<h1>Hello!<br>I'm <strong>Watson</strong></h1>"
+
+#: modules/intro/intro.html:5
+msgid ""
+"<h1>I’m here to answer<br>your insurance<br><strong>questions</strong> and "
+"help<br>you <strong>take action</strong>.</h1>"
+msgstr ""
+"<h1>I’m here to answer<br>your insurance<br><strong>questions</strong> and "
+"help<br>you <strong>take action</strong>.</h1>"
+
+#: modules/menu/menu.html:14
+msgid ""
+"<h5>About this application</h5><p>Use the IBM Watson™ Engagement Advisor to "
+"learn about a subject.</p><p>This application is powered by IBM Watson "
+"technology. Watson is a question answering system that understands plain "
+"English, and can master and retain information about diverse subjects that "
+"are garnered from vast amounts of data. This means you can ask Watson a "
+"question in the same way as you would ask a human, and get a response that "
+"only a computer with superhuman processing power can deliver.</p><p>The "
+"Watson engine that drives this application was trained to know the subject "
+"matter you care about. As Watson learns more about you, it can better tailor "
+"its responses to address your specific needs. Watson does not share your "
+"information with any other person or company.</p><p>When Watson is confident "
+"in a response, the response is displayed. When Watson is not as confident, "
+"the top responses that it considered are displayed for you to review. If "
+"Watson does not have useful information to share, it directs you to someone "
+"who does.</p><h5>Question phrasing tips</h5><p>Use correct grammar and "
+"punctuation.</p><p>Use precise language that identifies the type of "
+"information, such as the person, place, or thing that you are looking for. "
+"For example, include product names or models in the question.</p><p>Avoid "
+"asking compound questions. Enter two separate questions instead.</p><p>Avoid "
+"asking questions that prompt Watson to make judgments, calculations, "
+"predictions of the future (unless predictions are in the corpus), or that "
+"require Watson to assimilate information from various sources.</p>"
+msgstr ""
+"<h5>About this application</h5><p>Use the IBM Watson™ Engagement Advisor to "
+"learn about a subject.</p><p>This application is powered by IBM Watson "
+"technology. Watson is a question answering system that understands plain "
+"English, and can master and retain information about diverse subjects that "
+"are garnered from vast amounts of data. This means you can ask Watson a "
+"question in the same way as you would ask a human, and get a response that "
+"only a computer with superhuman processing power can deliver.</p><p>The "
+"Watson engine that drives this application was trained to know the subject "
+"matter you care about. As Watson learns more about you, it can better tailor "
+"its responses to address your specific needs. Watson does not share your "
+"information with any other person or company.</p><p>When Watson is confident "
+"in a response, the response is displayed. When Watson is not as confident, "
+"the top responses that it considered are displayed for you to review. If "
+"Watson does not have useful information to share, it directs you to someone "
+"who does.</p><h5>Question phrasing tips</h5><p>Use correct grammar and "
+"punctuation.</p><p>Use precise language that identifies the type of "
+"information, such as the person, place, or thing that you are looking for. "
+"For example, include product names or models in the question.</p><p>Avoid "
+"asking compound questions. Enter two separate questions instead.</p><p>Avoid "
+"asking questions that prompt Watson to make judgments, calculations, "
+"predictions of the future (unless predictions are in the corpus), or that "
+"require Watson to assimilate information from various sources.</p>"
+
+#: modules/menu/menu.html:26
+msgid ""
+"<h5>It’s between us.</h5><p>How your information is used…</p><p>Watson can "
+"provide very specific and helpful information to you.</p><p>As Watson learns "
+"more about you, it can provide even more specific information to fit your "
+"needs.</p><p>Watson never shares your information with any other person or "
+"company.</p>"
+msgstr ""
+"<h5>It’s between us.</h5><p>How your information is used…</p><p>Watson can "
+"provide very specific and helpful information to you.</p><p>As Watson learns "
+"more about you, it can provide even more specific information to fit your "
+"needs.</p><p>Watson never shares your information with any other person or "
+"company.</p>"
+
+#: modules/menu/menu.html:32
+msgid ""
+"<p>The following sources are referenced by Watson:</p><p><a href=\"http://"
+"www.ibm.com\">International Business Machines Corporation</a></p><p><a href="
+"\"http://www.ibm.com\">International Business Machines Corporation</a></"
+"p><p><a href=\"http://www.ibm.com\">International Business Machines "
+"Corporation</a></p>"
+msgstr ""
+"<p>The following sources are referenced by Watson:</p><p><a href=\"http://"
+"www.ibm.com\">International Business Machines Corporation</a></p><p><a href="
+"\"http://www.ibm.com\">International Business Machines Corporation</a></"
+"p><p><a href=\"http://www.ibm.com\">International Business Machines "
+"Corporation</a></p>"
+
+#: modules/menu/menu.html:20
+msgid ""
+"<p>Watson Engagement Advisor - Version 2.24</p><p>© International Business "
+"Machines 2015</p>"
+msgstr ""
+"<p>Watson Engagement Advisor - Version 2.24</p><p>© International Business "
+"Machines 2015</p>"
+
+#: modules/menu/menu.html:19
+msgid "About"
+msgstr "About"
+
+#: modules/dialog/dialog-controller.js:57
+msgid "Ask a question or reply to Watson"
+msgstr "Ask a question or reply to Watson"
+
+#: modules/quit/quit.html:9 modules/quit/quit_embedded.html:9
+msgid "Cancel"
+msgstr "Cancel"
+
+#: modules/guidance/guidance.html:19
+msgid "Change Address"
+msgstr "Change Address"
+
+#: modules/dialog/components/dialog-feedback.html:2
+msgid "Did this answer your question?"
+msgstr "Did this answer your question?"
+
+#: modules/guidance/guidance.html:52
+msgid "Do I need collision protection?"
+msgstr "Do I need collision protection?"
+
+#: modules/guidance/guidance.html:34
+msgid "Do I qualify for a discount?"
+msgstr "Do I qualify for a discount?"
+
+#: modules/guidance/guidance.html:32
+msgid "Get Answers"
+msgstr "Get Answers"
+
+#: modules/guidance/guidance.html:15
+msgid "Get a Quote"
+msgstr "Get a Quote"
+
+#: modules/menu/menu.html:13
+msgid "Help page"
+msgstr "Help page"
+
+#: modules/guidance/guidance.html:6
+msgid "Helpful Links"
+msgstr "Helpful Links"
+
+#: modules/dialog/dialog-controller.js:50
+msgid "How can I help you?"
+msgstr "How can I help you?"
+
+#: modules/guidance/guidance.html:38
+msgid "How do I submit a claim?"
+msgstr "How do I submit a claim?"
+
+#: modules/quit/quit_embedded.html:8
+msgid "I'm Done"
+msgstr "I'm Done"
+
+#: modules/dialog/dialog-controller.js:43
+msgid "Let's chat. Tell me how I can help you."
+msgstr "Let's chat. Tell me how I can help you."
+
+#: modules/dialog/components/dialog-feedback.html:5
+msgid "No"
+msgstr "No"
+
+#: modules/menu/menu.html:25
+msgid "Privacy"
+msgstr "Privacy"
+
+#: modules/quit/quit.html:8
+msgid "Quit"
+msgstr "Quit"
+
+#: modules/dialog/dialog-entries.html:5
+msgid "Show all"
+msgstr "Show all"
+
+#: modules/dialog/dialog-entries.html:6
+msgid "Show less"
+msgstr "Show less"
+
+#: modules/intro/intro.html:9
+msgid "Skip"
+msgstr "Skip"
+
+#: modules/menu/menu.html:31
+msgid "Sources"
+msgstr "Sources"
+
+#: modules/guidance/guidance.html:13
+msgid "Take Action"
+msgstr "Take Action"
+
+#: modules/guidance/guidance.html:23
+msgid "Update a Policy"
+msgstr "Update a Policy"
+
+#: modules/guidance/guidance.html:48
+msgid "Who is covered on my policy?"
+msgstr "Who is covered on my policy?"
+
+#: modules/dialog/components/dialog-feedback.html:3
+msgid "Yes"
+msgstr "Yes"
+
+#~ msgid ""
+#~ "<h5>It’s between us.</h5><p>How your information is used&hellip;</"
+#~ "p><p>Watson can provide very specific and helpful information to you.</"
+#~ "p><p>As Watson learns more about you, it can provide even more specific "
+#~ "information to fit your needs.</p><p>Watson never shares your information "
+#~ "with any other person or company.</p>"
+#~ msgstr ""
+#~ "<h5>It’s between us.</h5><p>How your information is used&hellip;</"
+#~ "p><p>Watson can provide very specific and helpful information to you.</"
+#~ "p><p>As Watson learns more about you, it can provide even more specific "
+#~ "information to fit your needs.</p><p>Watson never shares your information "
+#~ "with any other person or company.</p>"
+
+#~ msgid ""
+#~ "<p>Watson Engagement Advisor - Version 2.24</p><p>;International Business "
+#~ "Machines 2015</p>"
+#~ msgstr ""
+#~ "<p>Watson Engagement Advisor - Version 2.24</p><p>;International Business "
+#~ "Machines 2015</p>"
+
+#~ msgid ""
+#~ "<p>Watson Engagement Advisor - Version 2.24</p><p>International Business "
+#~ "Machines 2015</p>"
+#~ msgstr ""
+#~ "<p>Watson Engagement Advisor - Version 2.24</p><p>International Business "
+#~ "Machines 2015</p>"
+
+#~ msgid ""
+#~ "<p>Watson Engagement Advisor - Version 2.24</p><p>&copy; International "
+#~ "Business Machines 2015</p>"
+#~ msgstr ""
+#~ "<p>Watson Engagement Advisor - Version 2.24</p><p>&copy; International "
+#~ "Business Machines 2015</p>"
+
+#~ msgid ""
+#~ "<h5>About this application</h5><p>Use the IBM Watson™ Engagement Advisor "
+#~ "to learn about a subject.</p><p>This application is powered by IBM Watson "
+#~ "technology. Watson is a question answering system that understands plain "
+#~ "English, and can master and retain information about diverse subjects "
+#~ "that are garnered from vast amounts of data. This means you can ask "
+#~ "Watson a question in the same way as you would ask a human, and get a "
+#~ "response that only a computer with superhuman processing power can "
+#~ "deliver.</p><p>The Watson engine that drives this application was trained "
+#~ "to know the subject matter you care about. As Watson learns more about "
+#~ "you, it can better tailor its responses to address your specific needs. "
+#~ "Watson does not share your information with any other person or company.</"
+#~ "p><p>When Watson is confident in a response, the response is displayed. "
+#~ "When Watson is not as confident, the top responses that it considered are "
+#~ "displayed for you to review. If Watson does not have useful information "
+#~ "to share, it directs you to someone who does.</p>"
+#~ msgstr ""
+#~ "<h5>About this application</h5><p>Use the IBM Watson™ Engagement Advisor "
+#~ "to learn about a subject.</p><p>This application is powered by IBM Watson "
+#~ "technology. Watson is a question answering system that understands plain "
+#~ "English, and can master and retain information about diverse subjects "
+#~ "that are garnered from vast amounts of data. This means you can ask "
+#~ "Watson a question in the same way as you would ask a human, and get a "
+#~ "response that only a computer with superhuman processing power can "
+#~ "deliver.</p><p>The Watson engine that drives this application was trained "
+#~ "to know the subject matter you care about. As Watson learns more about "
+#~ "you, it can better tailor its responses to address your specific needs. "
+#~ "Watson does not share your information with any other person or company.</"
+#~ "p><p>When Watson is confident in a response, the response is displayed. "
+#~ "When Watson is not as confident, the top responses that it considered are "
+#~ "displayed for you to review. If Watson does not have useful information "
+#~ "to share, it directs you to someone who does.</p>"
+
+#~ msgid ""
+#~ "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget "
+#~ "ornare eros, ac ultrices tortor. Donec pharetra orci sed cursus pretium. "
+#~ "Curabitur fermentum dignissim orci ac laoreet. Donec gravida rutrum "
+#~ "dignissim. Etiam sollicitudin blandit neque id pellentesque.</p><p>In sed "
+#~ "dignissim enim. Pellentesque quis bibendum sapien, vitae aliquet mi. "
+#~ "Donec dignissim aliquet risus, sit amet finibus metus auctor vel.</p>"
+#~ msgstr ""
+#~ "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas get "
+#~ "ornare eros, ac ultrices tortor. Donec pharetra orci sed cursus pretium. "
+#~ "Curabitur fermentum dignissim orci ac laoreet. Donec gravida rutrum "
+#~ "dignissim. Etiam sollicitudin blandit neque id pellentesque.</p><p>In sed "
+#~ "dignissim enim. Pellentesque quis bibendum sapien, vitae aliquet mi. "
+#~ "Donec dignissim aliquet risus, sit amet finibus metus auctor vel.</p>"
+
+#~ msgid "Help"
+#~ msgstr "Help"

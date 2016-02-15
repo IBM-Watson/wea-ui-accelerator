@@ -1,0 +1,26 @@
+<div class="example">
+  <textarea class="example__code form-control" ng-model="model"></textarea>
+
+  <div class="example__container dialog_state_answered">
+    <watson-avatar class="dialog__avatar row" state="default"></watson-avatar>
+    <form class="dialog-form form row" name="dialogForm" role="form">
+      <div class="form-group">
+        <input class="dialog-form__input form-control"
+               type="search"
+               placeholder="Ask a question or reply to Watson">
+      </div>
+    </form>
+    <div class="row">
+      <ul class="dialog-entries">
+        <li class="dialog-entry">
+          <div class="arrow-down-sm">
+            <div class="dialog-entry__question">
+              <em>user input</em>
+            </div>
+          </div>
+          <response class="dialog-entry__response response" content="buildResponse(model)"></response>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

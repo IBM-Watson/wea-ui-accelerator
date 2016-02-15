@@ -1,0 +1,257 @@
+// (c) Copyright 2001-2015 IBM Corporation. All rights reserved.
+
+$default-color--highlight: $brand-success !default;
+$default-color--secondary: $grey0 !default;
+
+.full-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding: $status-bar-height $padding-base-horizontal #{$bottom-bar-height + 2 * $padding-large-vertical};
+  overflow: auto;
+}
+
+@media (min-width: $screen-sm-min) {
+  .full-screen > *:not(watson-avatar) {
+    padding-right: 15%;
+    padding-left: 15%;
+  }
+}
+
+@media (min-width: $screen-lg-min) {
+  .full-screen {
+    left: calc((100% - #{$container-lg}) / 2);
+    width: $container-lg;
+  }
+}
+
+.bubbles,
+.boxes {
+  padding: 0;
+  text-align: center;
+  list-style-type: none;
+}
+
+.bubbles {
+  li {
+    @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin: 0 8px;
+    line-height: 60px;
+    border: 1px solid;
+    border-radius: 50%;
+  }
+
+  li:first-of-type {
+    @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+  }
+
+  li:last-of-type {
+    @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+  }
+
+  .autoinput {
+    display: block;
+  }
+}
+
+.boxes {
+  margin: .5em 0;
+
+  li {
+    @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+    display: table;
+    width: 100%;
+    min-height: 40px;
+    margin: .5em 0;
+    border: 1px solid;
+  }
+
+  .secondary {
+    @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+  }
+
+  .autoinput {
+    display: table-cell;
+    padding: .5em;
+    vertical-align: middle;
+  }
+}
+
+.didyoumean {
+  li:last-of-type {
+    @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+  }
+}
+
+.instructions {
+  margin: 1em 0;
+  font-size: $font-size-small;
+}
+
+.call-to-action {
+  margin: 1em 0;
+  font-weight: $font-weight-medium;
+}
+
+.highlight {
+  color: $default-color--highlight;
+}
+
+.tasks {
+  $tasks-border-width: 3px;
+  $tasks-title-color: $brand-info;
+
+  padding: 0 1em .75em;
+  margin: 0 0 0 #{-$tasks-border-width};
+  font-size: $font-size-small;
+  color: $default-color--secondary;
+  list-style-type: none;
+  border-left: $tasks-border-width solid $tasks-title-color;
+
+  &:first-of-type {
+    margin-top: .5em;
+  }
+
+  &:last-of-type {
+    margin-bottom: .5em;
+  }
+
+  li {
+    padding: 0 0 .75em;
+    line-height: 1em;
+    border-bottom: 1px solid $grey0;
+  }
+
+  &.title li {
+    padding: .75em 0 0;
+    font-weight: $font-weight-medium;
+    color: $tasks-title-color;
+    border-bottom: 0;
+  }
+}
+
+ul {
+  padding-left: 2em;
+  margin: .5em 0;
+  text-align: left;
+  list-style-type: disc;
+}
+
+datetime,
+autoselect {
+  display: block;
+  margin: 1em 0;
+
+  button {
+    @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+    width: 100%;
+    min-height: 40px;
+    padding: .5em;
+    border: 1px solid;
+  }
+}
+
+datetime {
+  input {
+    display: block;
+    float: left;
+    padding: 0;
+    margin: 0 auto 1em;
+  }
+}
+
+autoselect {
+  select {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin: 0 auto 1em;
+    background-color: transparent;
+    border-color: $default-border-color;
+    border-width: 2px 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+  }
+}
+
+code {
+  color: inherit;
+  background-color: inherit;
+}
+
+blockquote {
+  $blockquote-border-width: 3px;
+  $blockquote-border-color: $default-color--highlight;
+
+  padding: .75em 1em;
+  margin: .5em 0 .5em #{-$blockquote-border-width};
+  font-family: $font-family-serif;
+  font-size: $font-size-small;
+  line-height: 1.5em;
+  color: $default-color--secondary;
+  text-align: left;
+  border-left: $blockquote-border-width solid $blockquote-border-color;
+
+  h1 {
+    margin-top: 0;
+    font-size: $font-size-base;
+    font-weight: $font-weight-semi-bold;
+  }
+
+  ul {
+    margin: .25em 0;
+  }
+
+  li {
+    font-size: $font-size-small;
+  }
+}
+
+feedback {
+  display: block;
+  margin-top: 1em;
+  font-family: $font-family-sans-serif;
+  font-size: 12px;
+  color: $dark-grey;
+
+  a:first-of-type {
+    margin-left: 2 * $padding-large-horizontal;
+  }
+
+  a:focus,
+  a:hover {
+    color: $link-color;
+  }
+
+  .spacer {
+    padding: 0 $padding-small-horizontal;
+  }
+
+  &.selected-yes {
+    .yes {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .no {
+      color: $dark-grey;
+    }
+  }
+
+  &.selected-no {
+    .yes {
+      color: $dark-grey;
+    }
+
+    .no {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+}

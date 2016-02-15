@@ -1,0 +1,23 @@
+// (c) Copyright 2001-2015 IBM Corporation. All rights reserved.
+
+// Dialog "answered" state in embedded (widget) mode
+.dialog_state_answered {
+
+  .dialog__show-all-toggle {
+    span {
+      font-size: $font-size-small;
+    }
+  }
+
+  .dialog-entry {
+    font-size: $font-size-small;
+  }
+
+  .bubbles {
+    li {
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+    }
+  }
+}

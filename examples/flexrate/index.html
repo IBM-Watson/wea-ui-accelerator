@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- (c) Copyright 2001-2015 IBM Corporation. All rights reserved. -->
+<html id="ng-app" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="128x128" href="images/fr_icon.png">
+    <link rel="apple-touch-icon" href="images/fr_icon.png">
+    <title>FlexRate</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="styles/flexrate.css">
+  </head>
+  <body>
+    <div class="container">
+      <section class="landing">
+        <div class="landing__header row">
+          <h1>FlexRate.</h1>
+          <h3>The best rate. Guaranteed.</h3>
+        </div>
+        <div class="row">
+          <div class="col-sm-8 hidden-xs">
+            <div class="landing__body">
+              <img src="images/banner.jpg">
+              <p><strong>FlexRate</strong> has been here helping protect your family for more than 100 years.  Protecting your family is our business.  We are here for you.</p>
+              <p>Our mission is to provide you with the best coverage at the best price.  Client satisfaction is what we strive for.</p>
+              <p>FlexRate Guarantees price, satisfaction and most importantly security to help our clients protect their home, life, auto and condo.</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4">
+            <div class="arrow-up-sm hidden-lg">
+              <a class="landing__watson-trigger" href="<!-- @echo WEA_URL -->">
+                <img class="landing__avatar" src="images/avatar/avatar-listening.svg"></img>
+                <h3>Meet Watson.</h3>
+                <p>I can answer your questions,<br/>
+                and help you take action!</p>
+              </a>
+            </div>
+
+            <iframe class="wea-widget visible-lg-block" src="<!-- @echo WEA_WIDGET_URL -->"></iframe>
+
+            <div class="landing__products">
+              <h4>Our Products</h4>
+              <ul class="landing__product-list row">
+                <li class="col-xs-6">
+                  <div class="landing__product landing__product_type_home">
+                    <img src="images/Home_128.svg"/><br/>
+                    Home
+                  </div>
+                </li>
+                <li class="col-xs-6">
+                  <div class="landing__product landing__product_type_auto">
+                    <img src="images/Auto_128.svg"/><br/>
+                    Auto
+                  </div>
+                </li>
+                <li class="col-xs-6">
+                  <div class="landing__product landing__product_type_condo">
+                    <img src="images/Condo_128.svg"/><br/>
+                    Condo
+                  </div>
+                </li>
+                <li class="col-xs-6">
+                  <div class="landing__product landing__product_type_life">
+                    <img src="images/Life_128.svg"/><br/>
+                    Life
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

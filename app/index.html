@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- (c) Copyright 2001-2015 IBM Corporation. All rights reserved. -->
+<html id="ng-app" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="128x128" href="images/fr_icon.png">
+    <link rel="apple-touch-icon" href="images/fr_icon.png">
+    <title>FlexRate</title>
+
+    <!-- build:css styles/vendor.min.css -->
+    <link rel="stylesheet" href="bower_components/angular/angular-csp.css">
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.min.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+    <div class="container" ng-class="{'embedded': embedded}" ng-view></div>
+    <!-- build:js vendor.min.js -->
+    <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-gettext/dist/angular-gettext.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="vendor/angular-ui-utils/scrollfix.js"></script>
+    <script src="vendor/lodash/lodash.js"></script>
+    <script src="vendor/watson-avatar/watson-avatar.js"></script>
+    <script src="vendor/watson-avatar/watson-avatar-directive.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js main.min.js -->
+    <script src="app.js"></script>
+    <script src="templates.js"></script>
+    <script src="translations/en_US.js"></script>
+    <script src="modules/dialog/index.js"></script>
+    <script src="modules/dialog/components/dialog-autoinput-directive.js"></script>
+    <script src="modules/dialog/components/dialog-autoselect-directive.js"></script>
+    <script src="modules/dialog/components/dialog-datetime-directive.js"></script>
+    <script src="modules/dialog/components/dialog-feedback-directive.js"></script>
+    <script src="modules/dialog/dialog-controller.js"></script>
+    <script src="modules/dialog/dialog-parser-service.js"></script>
+    <script src="modules/dialog/dialog-response-directive.js"></script>
+    <script src="modules/dialog/dialog-service.js"></script>
+    <script src="modules/dialog/dialog-service_wds.js"></script>
+    <script src="modules/dialog/dialog-service_wea.js"></script>
+    <script src="modules/examples/examples.js"></script>
+    <script src="modules/guidance/guidance-directive.js"></script>
+    <script src="modules/intro/intro-controller.js"></script>
+    <script src="modules/menu/menu-directive.js"></script>
+    <script src="modules/styleguide/index.js"></script>
+    <script src="modules/styleguide/styleguide-controller.js"></script>
+    <script src="modules/styleguide/styleguide-colors-directive.js"></script>
+    <script src="modules/styleguide/styleguide-example-directive.js"></script>
+    <script src="modules/quit/quit-directive.js"></script>
+    <script src="modules/util/index.js"></script>
+    <script src="modules/util/blur-on-directive.js"></script>
+    <script src="modules/util/max-clicks-directive.js"></script>
+    <!-- endbuild -->
+
+  </body>
+</html>

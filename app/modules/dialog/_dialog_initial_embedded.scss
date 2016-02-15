@@ -1,0 +1,12 @@
+// (c) Copyright 2001-2015 IBM Corporation. All rights reserved.
+
+// Dialog "initial" state in embedded (widget) mode
+.dialog_state_initial {
+  .dialog-form {
+    .form-group {
+      height: 20vw;
+      max-height: 85px;
+      min-height: 75px;
+    }
+  }
+}

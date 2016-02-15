@@ -1,0 +1,119 @@
+// (c) Copyright 2001-2015 IBM Corporation. All rights reserved.
+
+// Dialog "editing" state
+$editing-bg: linear-gradient(135deg, rgba(19, 54, 71, 1) 23%, rgba(5, 66, 102, 1) 97%) !default;
+$editing-color: $white0 !default;
+$editing-input-bg: $input-bg !default;
+$editing-input-color: $input-color !default;
+$editing-input-color-placeholder: $input-color-placeholder !default;
+$editing-form-border-color: rgba(255, 255, 255, .15) !default;
+$editing-controls-color: $editing-color !default;
+
+.dialog_state_editing {
+  $form-min-height: 100px;
+  $form-max-height: 120px;
+  $form-height: 25vw;
+  $form-border-width: 9px;
+  $form-content-min-height: $form-min-height - $form-border-width * 2;
+  $form-content-max-height: $form-max-height - $form-border-width * 2;
+  $form-content-height: calc(#{$form-height} - #{$form-border-width * 2});
+
+  color: $editing-color;
+  background: $editing-bg;
+
+  quit {
+    color: $editing-controls-color;
+  }
+
+  .dialog__avatar {
+    display: block;
+    width: 70%;
+    max-width: 300px;
+    margin: 0 auto;
+    visibility: hidden;
+  }
+
+  .dialog-form__avatar {
+    display: block;
+    max-width: $form-max-height - 10px;
+    color: $editing-input-color;
+  }
+
+  @media (min-width: $screen-sm-min) {
+    .dialog__avatar {
+      visibility: visible;
+    }
+
+    .dialog-form__avatar {
+      display: none;
+    }
+  }
+
+  // iPad landscape mode
+  @media (min-device-width : 768px)
+  and (max-device-width : 1024px)
+  and (orientation : landscape) {
+    .dialog__avatar {
+      visibility: hidden;
+    }
+
+    .dialog-form__avatar {
+      display: block;
+    }
+  }
+
+  .dialog-form {
+    $form-transition-duration: .25s;
+
+    @include arrow-down(7px, $editing-input-bg, $form-transition-duration);
+    height: $form-height;
+    max-height: $form-max-height;
+    min-height: $form-min-height;
+    padding: $form-border-width 0;
+    line-height: $form-height;
+    background: $editing-form-border-color;
+    opacity: 1;
+
+    &,
+    * {
+      transition: background $form-transition-duration linear;
+    }
+
+    .form-group {
+      display: flex;
+      height: $form-content-height;
+      max-height: $form-content-max-height;
+      min-height: $form-content-min-height;
+      background: $editing-input-bg;
+      align-items: center;
+    }
+  }
+
+  @media (min-width: $screen-sm-min) {
+    .dialog-form__input-container {
+      padding: 0 $padding-base-horizontal;
+    }
+  }
+
+  .dialog-form__input,
+  .dialog-form__input:focus {
+    padding: 0;
+    color: $editing-input-color;
+    background: $editing-input-bg;
+    border: 0;
+    border-radius: 0;
+    outline: none;
+    box-shadow: none;
+
+    &::placeholder {
+      color: $editing-input-color-placeholder;
+    }
+  }
+
+  .dialog-form__input-clear {
+    margin-right: $padding-base-horizontal;
+    font-size: 21px;
+    color: $editing-input-color;
+    text-align: center;
+  }
+}

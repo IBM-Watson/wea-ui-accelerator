@@ -1,0 +1,63 @@
+<!-- (c) Copyright 2001-2015 IBM Corporation. All rights reserved. -->
+<!-- Flexrate example demonstrates two different approaches of including the app
+     in a website: a link and an embedded widget. In the example page, a link to
+     the app is shown on narrow viewports and an embedded widget is shown on
+     wide viewports. -->
+<section class="flexrate-landing">
+  <div class="flexrate-landing__header row">
+    <h1>FlexRate.</h1>
+    <h3>The best rate. Guaranteed.</h3>
+  </div>
+  <div class="row">
+    <div class="col-sm-8 hidden-xs">
+      <div class="flexrate-landing__body">
+        <img src="images/examples/flexrate/banner.jpg">
+        <p><strong>FlexRate</strong> has been here helping protect your family for more than 100 years.  Protecting your family is our business.  We are here for you.</p>
+        <p>Our mission is to provide you with the best coverage at the best price.  Client satisfaction is what we strive for.</p>
+        <p>FlexRate Guarantees price, satisfaction and most importantly security to help our clients protect their home, life, auto and condo.</p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="arrow-up-sm hidden-lg">
+        <a class="flexrate-landing__watson-trigger" href="#/?returnTo=wea:///examples/flexrate">
+          <watson-avatar class="flexrate-landing__avatar" state="listening"></watson-avatar>
+          <h3>Meet Watson.</h3>
+          <p>I can answer your questions,<br/>
+          and help you take action!</p>
+        </a>
+      </div>
+
+      <iframe class="wea-widget visible-lg-block" src="?embedded=true#/"></iframe>
+
+      <div class="flexrate-landing__products">
+        <h3>Our Products</h3>
+        <ul class="flexrate-landing__product-list row">
+          <li class="col-xs-6">
+            <div class="flexrate-landing__product flexrate-landing__product_type_home">
+              <img src="images/examples/flexrate/Home_128.svg"/><br/>
+              Home
+            </div>
+          </li>
+          <li class="col-xs-6">
+            <div class="flexrate-landing__product flexrate-landing__product_type_auto">
+              <img src="images/examples/flexrate/Auto_128.svg"/><br/>
+              Auto
+            </div>
+          </li>
+          <li class="col-xs-6">
+            <div class="flexrate-landing__product flexrate-landing__product_type_condo">
+              <img src="images/examples/flexrate/Condo_128.svg"/><br/>
+              Condo
+            </div>
+          </li>
+          <li class="col-xs-6">
+            <div class="flexrate-landing__product flexrate-landing__product_type_life">
+              <img src="images/examples/flexrate/Life_128.svg"/><br/>
+              Life
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,57 @@
+<!-- (c) Copyright 2001-2015 IBM Corporation. All rights reserved. -->
+<section class="guidance" ng-class="{'guidance_state_visible': visible}">
+  <div class="guidance-overlay container">
+    <input type="checkbox" id="guidance-trigger" class="guidance-trigger" ng-model="visible"/>
+    <label for="guidance-trigger" class="guidance-trigger-label">
+      <translate>Helpful Links</translate><br/>
+      <span class="glyphicon glyphicon-chevron-up" ng-hide="visible"></span>
+      <span class="glyphicon glyphicon-chevron-down" ng-show="visible"></span>
+    </label>
+
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h3 class="guidance__heading" translate>Take Action</h3>
+        <span class="guidance__entry col-xs-12 col-sm-3">
+          <autoinput><translate>Get a Quote</translate></autoinput>
+        </span>
+        <span class="guidance__entry-spacer col-sm-1 hidden-xs">|</span>
+        <span class="guidance__entry col-xs-12 col-sm-4">
+          <autoinput><translate>Change Address</translate></autoinput>
+        </span>
+        <span class="guidance__entry-spacer col-sm-1 hidden-xs">|</span>
+        <span class="guidance__entry col-xs-12 col-sm-3">
+          <autoinput><translate>Update a Policy</translate></autoinput>
+        </span>
+      </div>
+    </div>
+
+    <hr class="visible-sm-block"/>
+
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <h3 class="guidance__heading" translate>Get Answers</h3>
+        <span class="guidance__entry col-xs-12 col-sm-5">
+          <autoinput><translate>Do I qualify for a discount?</translate></autoinput>
+        </span>
+        <span class="guidance__entry-spacer col-sm-2 hidden-xs">|</span>
+        <span class="guidance__entry col-xs-12 col-sm-5">
+          <autoinput><translate>How do I submit a claim?</translate></autoinput>
+        </span>
+      </div>
+    </div>
+
+    <br class="visible-sm-block"/>
+
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <span class="guidance__entry col-xs-12 col-sm-5">
+          <autoinput><translate>Who is covered on my policy?</translate></autoinput>
+        </span>
+        <span class="guidance__entry-spacer col-sm-2 hidden-xs">|</span>
+        <span class="guidance__entry col-xs-12 col-sm-5">
+          <autoinput><translate>Do I need collision protection?</translate></autoinput>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

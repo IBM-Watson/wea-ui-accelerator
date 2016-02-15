@@ -1,0 +1,38 @@
+<!-- (c) Copyright 2001-2015 IBM Corporation. All rights reserved. -->
+<section class="menu" ng-class="{'menu_state_visible': visible}">
+  <input type="checkbox" id="menu-trigger" class="menu-trigger" ng-model="visible"/>
+  <label for="menu-trigger" class="menu-trigger-label navbar-toggle">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </label>
+
+  <div class="menu-overlay">
+    <ul class="menu-items">
+      <li id="help">
+        <h3 ng-click="toggleSelected('help')" translate>Help page</h3>
+        <translate>
+          <h5>About this application</h5><p>Use the IBM Watson™ Engagement Advisor to learn about a subject.</p><p>This application is powered by IBM Watson technology. Watson is a question answering system that understands plain English, and can master and retain information about diverse subjects that are garnered from vast amounts of data. This means you can ask Watson a question in the same way as you would ask a human, and get a response that only a computer with superhuman processing power can deliver.</p><p>The Watson engine that drives this application was trained to know the subject matter you care about. As Watson learns more about you, it can better tailor its responses to address your specific needs. Watson does not share your information with any other person or company.</p><p>When Watson is confident in a response, the response is displayed. When Watson is not as confident, the top responses that it considered are displayed for you to review. If Watson does not have useful information to share, it directs you to someone who does.</p><h5>Question phrasing tips</h5><p>Use correct grammar and punctuation.</p><p>Use precise language that identifies the type of information, such as the person, place, or thing that you are looking for. For example, include product names or models in the question.</p><p>Avoid asking compound questions. Enter two separate questions instead.</p><p>Avoid asking questions that prompt Watson to make judgments, calculations, predictions of the future (unless predictions are in the corpus), or that require Watson to assimilate information from various sources.</p>
+        </translate>
+      </li>
+      <li id="about">
+        <h3 ng-click="toggleSelected('about')" translate>About</h3>
+        <translate>
+          <p>Watson Engagement Advisor - Version 2.24</p><p>© International Business Machines 2015</p>
+        </translate>
+      </li>
+      <li id="privacy">
+        <h3 ng-click="toggleSelected('privacy')" translate>Privacy</h3>
+        <translate>
+          <h5>It’s between us.</h5><p>How your information is used…</p><p>Watson can provide very specific and helpful information to you.</p><p>As Watson learns more about you, it can provide even more specific information to fit your needs.</p><p>Watson never shares your information with any other person or company.</p>
+        </translate>
+      </li>
+      <li id="sources">
+        <h3 ng-click="toggleSelected('sources')" translate>Sources</h3>
+        <translate>
+          <p>The following sources are referenced by Watson:</p><p><a href="http://www.ibm.com">International Business Machines Corporation</a></p><p><a href="http://www.ibm.com">International Business Machines Corporation</a></p><p><a href="http://www.ibm.com">International Business Machines Corporation</a></p>
+        </translate>
+      </li>
+    </ul>
+  </div>
+</section>

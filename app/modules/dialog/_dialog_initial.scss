@@ -1,0 +1,85 @@
+// (c) Copyright 2001-2015 IBM Corporation. All rights reserved.
+
+// Dialog "initial" state
+$home-bg: linear-gradient(135deg, rgba(5, 66, 102, 1) 0%, rgba(19, 54, 71, 1) 100%) !default;
+$home-color: $white0 !default;
+$home-input-bg: $input-bg !default;
+$home-input-color: $input-color !default;
+$home-input-color-placeholder: $input-color-placeholder !default;
+$home-controls-color: $home-color !default;
+
+.dialog_state_initial {
+  $form-min-height: 100px;
+  $form-max-height: 120px;
+  $form-height: 25vw;
+
+  color: $home-color;
+  background: $home-bg;
+
+  quit {
+    color: $home-controls-color;
+  }
+
+  .dialog__avatar {
+    display: block;
+    width: 70%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .dialog-form {
+    @include arrow-down(20px, $home-input-bg);
+    margin: 0;
+    color: $home-input-color;
+    background: $home-input-bg;
+    animation-duration: .5s;
+    animation-name: initialFadeIn;
+    animation-timing-function: ease-in-out;
+
+    .form-group {
+      display: flex;
+      height: $form-height;
+      max-height: $form-max-height;
+      min-height: $form-min-height;
+      background: $home-input-bg;
+      align-items: center;
+    }
+  }
+
+  .dialog-form__input-container {
+    width: 100%;
+    padding: 0 $padding-base-horizontal;
+  }
+
+  .dialog-form__input {
+    padding: 0;
+    color: $home-input-color;
+    background: $home-input-bg;
+    border: 0;
+    border-radius: 0;
+    outline: none;
+    box-shadow: none;
+
+    &::placeholder {
+      color: $home-input-color-placeholder;
+    }
+  }
+
+  .dialog-form__input-clear {
+    display: none;
+  }
+}
+
+.embedded {
+  @import 'dialog_initial_embedded';
+}
+
+@keyframes initialFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

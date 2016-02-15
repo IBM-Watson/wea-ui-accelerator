@@ -1,0 +1,130 @@
+// (c) Copyright 2001-2015 IBM Corporation. All rights reserved.
+
+$intro-bg: $home-bg !default;
+$intro-color: $home-color !default;
+$intro-animation-duration: 9s;
+
+.symbol {
+  font-family: 'Zapf Dingbats', Arial;
+}
+
+.intro {
+  position: relative;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  color: $intro-color;
+  background: $intro-bg;
+  background-size: cover;
+
+  watson-avatar {
+    display: block;
+    width: 70%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .intro__items {
+    text-align: center;
+  }
+
+  .item {
+    animation-duration: $intro-animation-duration;
+    animation-timing-function: ease-in-out;
+
+    h1 {
+      font-size: 30px;
+      font-weight: $font-weight-light;
+    }
+  }
+
+  .item-one {
+    opacity: 0;
+    animation-name: itemOneOpacity;
+
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  .item-two {
+    max-height: 0;
+    overflow: hidden;
+    animation-name: itemTwoHeight;
+
+    h1 {
+      margin-top: 60px;
+      opacity: 0;
+      animation-duration: $intro-animation-duration;
+      animation-name: itemTwoOpacity;
+      animation-timing-function: ease-in-out;
+    }
+  }
+
+  .intro__skip {
+    position: absolute;
+    top: calc(100% - #{$bottom-bar-height});
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    font-size: $font-size-large;
+    line-height: $bottom-bar-height;
+    color: $intro-color;
+    text-align: center;
+    background-color: $bg-color-overlay-dark;
+  }
+}
+
+@keyframes itemOneOpacity {
+  5% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  33% {
+    opacity: 0;
+  }
+}
+
+@keyframes itemTwoHeight {
+  33% {
+    max-height: 0;
+  }
+
+  45% {
+    max-height: 300px;
+  }
+
+  88% {
+    max-height: 300px;
+  }
+
+  100% {
+    max-height: 0;
+  }
+}
+
+@keyframes itemTwoOpacity {
+  46% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  88% {
+    opacity: 0;
+  }
+}

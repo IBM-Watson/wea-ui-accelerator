@@ -1,0 +1,164 @@
+// (c) Copyright 2001-2015 IBM Corporation. All rights reserved.
+
+// Flexrate example
+
+$flexrate-bg: #f0eff0;
+$flexrate-color: #054266;
+$flexrate-trigger-bg: #054266;
+$flexrate-trigger-color: #fff;
+$flexrate-product-color: #fff;
+
+.flexrate-landing {
+  max-width: 1280px;
+  min-height: 100vh;
+  padding: 0 $padding-base-horizontal;
+  margin: 0 auto;
+  color: $flexrate-color;
+  background-color: $flexrate-bg;
+
+  h1,
+  h3 {
+    margin: 0;
+    letter-spacing: -.03em;
+  }
+
+  h3 {
+    font-size: 23px;
+  }
+}
+
+.flexrate-landing__header {
+  padding: #{2 * $padding-large-vertical} 0;
+
+  h1 {
+    font-size: 38px;
+    font-weight: $font-weight-semi-bold;
+  }
+
+  h3 {
+    font-weight: $font-weight-light;
+  }
+}
+
+.flexrate-landing__body {
+  margin-right: $padding-large-horizontal;
+  border: 1px solid $flexrate-color;
+
+  img {
+    display: block;
+    width: 100%;
+    min-height: 200px;
+    background-color: rgb(199, 198, 203);
+  }
+
+  p {
+    margin: 1em $padding-large-horizontal;
+  }
+}
+
+.flexrate-landing__watson-trigger {
+  display: block;
+  padding: 15px;
+  color: $flexrate-trigger-color;
+  cursor: pointer;
+  background-color: $flexrate-trigger-bg;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  h3 {
+    margin-bottom: 5px;
+    font-size: 23px;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 17px;
+    line-height: 1.17em;
+  }
+}
+
+.flexrate-landing__watson-trigger:hover {
+  color: $flexrate-trigger-color;
+}
+
+.flexrate-landing__avatar {
+  float: right;
+  width: 100px;
+  max-height: 100px;
+  min-height: 100px;
+  margin: -15px -15px 0 0;
+}
+
+.flexrate-landing__products {
+  padding: 0;
+  margin-top: 15px;
+
+  img {
+    width: 50%;
+    padding-bottom: 5px;
+  }
+}
+
+.flexrate-landing__product-list {
+  padding: 0;
+  list-style-type: none;
+
+  li {
+    padding: 5px;
+  }
+}
+
+.flexrate-landing__product {
+  display: block;
+  padding: 15px;
+  color: $flexrate-product-color;
+  text-align: center;
+}
+
+// scss-lint:disable ColorVariable
+.flexrate-landing__product_type_home {
+  background-color: #4b853d;
+}
+
+.flexrate-landing__product_type_auto {
+  background-color: #a5266d;
+}
+
+.flexrate-landing__product_type_condo {
+  background-color: #4278bc;
+}
+
+.flexrate-landing__product_type_life {
+  background-color: #018571;
+}
+// scss-lint:enable ColorVariable
+
+.wea-widget {
+  width: 100%;
+  height: 600px;
+  border: 1px solid $flexrate-color;
+}
+
+@media (max-width: 767px) {
+  .arrow-up-sm {
+    @include arrow-up(10px, $flexrate-color);
+    padding: 0;
+  }
+
+  .arrow-up-sm:before {
+    display: block;
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid $flexrate-color;
+    border-left: 10px solid transparent;
+    content: '';
+  }
+
+  .flexrate-landing__watson-trigger {
+    margin: 0 -15px;
+  }
+}

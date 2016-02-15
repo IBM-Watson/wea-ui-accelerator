@@ -1,0 +1,142 @@
+// (c) Copyright 2001-2015 IBM Corporation. All rights reserved.
+
+// COLORS
+$black: #000;
+
+$white0: #fff;
+$white1: #f0eff0;
+
+$blue6: #07212b;
+$blue7: #054266;
+$blue9: #1eade4;
+$blue10: #4278bc;
+
+$green2: #006059;
+$green3: #018571;
+
+$red0: #d9534f;
+
+$grey0: #3c4646;
+$grey1: #c7c6cb;
+$grey2: #c9cad2;
+$grey3: #bbbdbf;
+
+$dark-grey: #707070;
+$light-grey: #909090;
+
+$magenta1: #a5266d;
+
+$bg-color-overlay-dark: rgba(0, 0, 0, .2) !default;
+$bg-color-overlay-darker: rgba(0, 0, 0, .4) !default;
+
+// FONTS
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+
+$body-font-weight: $font-weight-light !default;
+
+$min-width: 320px;
+$min-height: 568px;
+$status-bar-height: 20px;
+$bottom-bar-height: 60px;
+
+// Bootstrap overrides
+$icon-font-path: '../fonts/bootstrap/';
+$grid-gutter-width: 0;
+$container-tablet: 100%;
+$container-desktop: 100%;
+
+$body-bg: $white1 !default;
+$font-size-base: 19px;
+$font-size-small: ceil(($font-size-base * .73)); // 14px
+
+$brand-primary: $blue7 !default;
+$brand-success: $green3 !default;
+$brand-info: $magenta1 !default;
+
+$link-color: $blue10 !default;
+
+$input-color: $brand-primary !default;
+$input-color-placeholder: $light-grey !default;
+
+$btn-default-bg: $white0 !default;
+$btn-default-color: $blue10 !default;
+$btn-default-border: $btn-default-color !default;
+
+$btn-primary-bg: $white0 !default;
+$btn-primary-color: $green3 !default;
+$btn-primary-border: $btn-primary-color !default;
+
+$btn-success-bg: $white0 !default;
+$btn-success-color: $green3 !default;
+$btn-success-border: $btn-success-color !default;
+
+$btn-danger-bg: $white0 !default;
+$btn-danger-color: $red0 !default;
+$btn-danger-border: $btn-danger-color !default;
+
+$padding-base-vertical: 6px !default;
+$padding-large-vertical: 10px !default;
+$padding-small-vertical: 5px !default;
+$padding-xs-vertical: 1px !default;
+
+$padding-base-horizontal: 12px !default;
+$padding-large-horizontal: 16px !default;
+$padding-small-horizontal: 10px !default;
+$padding-xs-horizontal: 5px !default;
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  min-width: $min-width;
+  min-height: $min-height;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-weight: $body-font-weight;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.row {
+  margin: 0;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+strong {
+  font-weight: $font-weight-medium;
+}
+
+watson-avatar {
+  div {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

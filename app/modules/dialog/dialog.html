@@ -1,0 +1,32 @@
+<!-- (c) Copyright 2001-2015 IBM Corporation. All rights reserved. -->
+<section class="dialog dialog_state_{{dialogCtrl.state.key}}">
+
+  <wea-quit ng-if="dialogCtrl.responseType === 'default' && !dialogCtrl.menuVisible"></wea-quit>
+
+  <wea-menu visible="dialogCtrl.menuVisible" ng-if="dialogCtrl.responseType === 'default'"></wea-menu>
+
+  <watson-avatar class="dialog__avatar" state="{{dialogCtrl.state.avatar.state}}" ng-click="dialogCtrl.restart()"></watson-avatar>
+
+  <div ng-include="'modules/dialog/dialog-entries.html'" ng-if="dialogCtrl.state.key === 'answered'"></div>
+
+  <form class="dialog-form form row" role="form" ng-submit="dialogCtrl.submit()">
+    <div class="form-group has-controls">
+      <div class="dialog-form__avatar col-xs-3" ng-if="dialogCtrl.state.key === 'editing'">
+        <watson-avatar state="{{dialogCtrl.state.avatar.state}}"></watson-avatar>
+      </div>
+      <div class="dialog-form__input-container col-xs-9 col-sm-12">
+        <input id="question"
+               class="dialog-form__input form-control"
+               type="text"
+               placeholder="{{dialogCtrl.state.inputPlaceholder}}"
+               ng-model="dialogCtrl.question"
+               ng-click="dialogCtrl.edit()"
+               wea-blur-on="queryBegin"
+               autocorrect="off">
+      </div>
+    </div>
+  </form>
+
+  <guidance ng-if="dialogCtrl.state.key === 'initial'"></guidance>
+
+</section>

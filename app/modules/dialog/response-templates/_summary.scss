@@ -1,0 +1,77 @@
+// (c) Copyright 2001-2015 IBM Corporation. All rights reserved.
+
+$summary-bg: $default-bg !default;
+$summary-color: $default-color !default;
+$summary-border-color: $default-border-color !default;
+$summary-cost-color: $brand-success !default;
+$summary-item-color: $default-color--secondary !default;
+
+.summary {
+  $avatar-min-size: 85px;
+  $avatar-max-size: 135px;
+
+  z-index: 85;
+  color: $summary-color;
+  text-align: left;
+  background: $summary-bg;
+
+  h3 {
+    float: left;
+    width: calc(100% - #{$avatar-max-size});
+    min-width: 200px;
+    margin: 0;
+    font-size: $font-size-base;
+    font-weight: $font-weight-light;
+    line-height: $avatar-min-size;
+  }
+
+  watson-avatar {
+    display: block;
+    float: right;
+    width: 25%;
+    max-width: $avatar-max-size;
+    min-width: $avatar-min-size;
+    cursor: pointer;
+  }
+}
+
+.summary__cost {
+  display: inline-block;
+  margin-top: -1em;
+  color: $summary-cost-color;
+
+  strong {
+    padding-right: .25em;
+    font-size: 2.25em;
+    font-weight: $font-weight-medium;
+    letter-spacing: -.03em;
+  }
+}
+
+.summary__items {
+  padding: 1em 0 0;
+  margin: 0;
+  font-size: $font-size-small;
+  color: $summary-item-color;
+  list-style: none;
+  border-top: 1px solid $summary-border-color;
+}
+
+.summary__item {
+  padding: 0;
+  margin: 0;
+
+  &:after {
+    display: block;
+    height: 1em;
+    clear: both;
+    content: ' ';
+  }
+
+  span {
+    display: block;
+    float: left;
+    width: 50%;
+    padding: 0 .5em;
+  }
+}

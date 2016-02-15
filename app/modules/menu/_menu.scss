@@ -1,0 +1,127 @@
+// (c) Copyright 2001-2015 IBM Corporation. All rights reserved.
+
+// Menu drawer
+$menu-bg: $blue6 !default;
+$menu-color: $home-color !default;
+$menu-link-color: $blue10 !default;
+$menu-subheading-color: $blue9 !default;
+$menu-item-height: 80px;
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 60;
+  width: 100%;
+  height: 100%;
+  color: $menu-color;
+  transition: all .2s;
+}
+
+.menu_state_visible {
+  $menu-offset-left: 24px + 2 * $padding-base-horizontal;
+  left: $menu-offset-left;
+  width: calc(100% - #{$menu-offset-left});
+}
+
+.menu-trigger {
+  display: none;
+}
+
+.menu-trigger-label {
+  position: absolute;
+  top: $padding-large-vertical + $status-bar-height;
+  left: -24px - $padding-base-horizontal;
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-weight: inherit;
+  cursor: pointer;
+
+  .icon-bar {
+    height: 3px;
+    background-color: $menu-color;
+  }
+}
+
+.menu-overlay {
+  height: 100%;
+  padding-left: $padding-small-horizontal;
+  overflow-x: hidden;
+  background: $menu-bg;
+}
+
+.menu-items {
+  margin: 0;
+  list-style-type: none;
+
+  li {
+    padding-right: 2 * $padding-base-horizontal;
+
+    p,
+    h5 {
+      display: none;
+    }
+
+    h5 {
+      color: $menu-subheading-color;
+    }
+  }
+
+  h3 {
+    margin: 0;
+    font-size: $font-size-large;
+    font-weight: $font-weight-light;
+    line-height: $menu-item-height;
+    cursor: pointer;
+
+    &:after,
+    &:before {
+      display: inline-block;
+      padding-bottom: $padding-large-vertical;
+      font-size: 2em;
+      line-height: $menu-item-height - $padding-large-vertical;
+    }
+
+    &:after {
+      float: right;
+      content: '›';
+    }
+  }
+
+  a {
+    color: $menu-link-color;
+  }
+}
+
+.item-selected {
+  li {
+    &:not(.selected) {
+      display: none;
+    }
+
+    p,
+    h5 {
+      display: block;
+      margin: 1em 0;
+    }
+
+    p:first-of-type {
+      margin-top: 12px;
+    }
+  }
+
+  h3 {
+    text-align: center;
+
+    &:before {
+      float: left;
+      margin-left: -24px;
+      content: '‹';
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+}

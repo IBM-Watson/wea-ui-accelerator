@@ -1,0 +1,63 @@
+// (c) Copyright 2001-2015 IBM Corporation. All rights reserved.
+
+// Quit
+quit {
+  position: relative;
+}
+
+.quit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  padding: $padding-small-vertical + $status-bar-height 0  0 $padding-base-horizontal;
+}
+
+.quit__link {
+  font-size: 28px;
+  line-height: 28px;
+  color: inherit;
+  cursor: pointer;
+}
+
+.quit__link_mode_embedded {
+  font-size: $font-size-small;
+}
+
+.quit-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: $bg-color-overlay-darker;
+}
+
+.quit-overlay__actions {
+  position: fixed;
+  bottom: $padding-large-vertical;
+  left: 0;
+  width: 100%;
+  padding: 0 $padding-xs-horizontal;
+
+  button {
+    max-width: $container-lg - 2 * $padding-xs-horizontal;
+    margin: 0 auto;
+    border-color: transparent;
+  }
+}
+
+.quit-overlay__actions_mode_embedded {
+  position: relative;
+  width: 80%;
+  padding: 50px;
+  margin: 60% auto;
+  text-align: center;
+  background: $body-bg;
+  border-radius: $border-radius-base;
+
+  button {
+    border-color: initial;
+  }
+}
