@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Watson Engagement Advisor Accelerator App
 ===================
 
@@ -284,3 +285,6 @@ for linting once, or
 	$ gulp autolint
 
 for linting whenever a source file changes.
+=======
+# wea-ui-accelerator
+>>>>>>> 9f9cada4970d83493b7fb6543cac1d17af6fcb51
